@@ -35,4 +35,20 @@
             var dd=parseInt(x[8].concat(x[9]));
             var cc=parseInt(x[0].concat(x[1]));
             var yy=parseInt(x[2].concat(x[3]));
+            if(mm===0)
+            {
+                mm=11;
+                yy=yy-1;
+            }
+            else if (mm===1)
+            {
+                mm=12;
+                yy=yy-1;
+            }
+            else
+            {
+                mm=mm-1;
+            }
+
+
 </html>
