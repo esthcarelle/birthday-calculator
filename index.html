@@ -70,6 +70,14 @@
             var namesMale=["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","kofi","kwame"];
             var namesFemale=["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
             var j;
+            for (i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    for(j=0;j<=6;j++){
+                        if((gender[i].value==="female")&& (r===j))
+                        {
+                        txt = txt + gender[i].value + " "  ;
+                        document.getElementById("demo").innerHTML  = "Your gender is " + txt + " ,your name is "  + namesFemale[j] + "  and you were born on " +  days[j];
+                        }
 
 
 </html>
