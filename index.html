@@ -12,10 +12,21 @@
     <div class="container">
         <div class="jumbotron">
             <h1>Akan Name  and birthday calculator</h1>
-
+            <form action="/action_page.php">
+                <input type="radio" name="gender" value="male">Male<br>
+                <input type="radio" name="gender" value="female">Female<br>
+                 Birthdate:<input type="date" id="myDate" ><br><br>
+                <input type="button" onclick="myFunction()" value="submit">
+                <br><br>
+                <p id="demo"></p>
+          
+            </form> 
         </div>
-
     </div>
     
 </body>
+<script>
+        function myFunction() {
+            var gender = document.forms[0];
+            var txt = "";
 </html>
