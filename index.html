@@ -49,6 +49,19 @@
             {
                 mm=mm-1;
             }
+            var day =  dd + parseInt(((13*mm -1)/5)) + yy + parseInt((yy/4)) + parseInt((cc/4)) - 2*cc;
+            var rem=day%7;
+            var i,r;
+            if(rem<0)
+            {
+                for(i=rem;i>=rem-6;i--)
+                {
+                    if(i%7===0)
+                    {
+                    r=(i*(-1)) + rem;
+                    }
+                }
+            }
 
 
 </html>
