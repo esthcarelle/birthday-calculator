@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
-<body>
-    <div class="container">
-        <div class="jumbotron">
+<body class="bg-dark">
+    <div class="container ">
+        <div class="jumbotron bg-info">
                 <h1>Akan Name  and birthday calculator</h1>
                 <blockquote class="blockquote-reverse">
                     
-                    <p class="text-info">In this website,you can know your Akan name which is given to you according to the you were born!Enjoy while getting an Akan name</p>
+                    <p >In this website,you can know your Akan name which is given to you according to the you were born!Enjoy while getting an Akan name</p>
                 </blockquote>
             </div>
         </div>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8">
-                            <input class="form-control"  type="button" onclick="myFunction()" value="submit">
+                            <input class="form-control bg-default"  type="button" onclick="myFunction()" value="submit">
                     </div>
 
                 </div>
@@ -114,7 +114,9 @@
                         txt = txt + gender[i].value + " "  ;
                         document.getElementById("demo").innerHTML  = "Congratulations !!!!!!You got a new name! Your gender is " + txt + " ,your name is "  + namesMale[j] + "  and you were born on " +  days[j];
                         }
-                        
+                        if((gender[i].value==="")){
+                            document.getElementById("demo").innerHTML  ="please fill the form";
+                        }
 
                     }
                 }
