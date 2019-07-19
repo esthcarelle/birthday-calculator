@@ -11,20 +11,50 @@
 <body>
     <div class="container">
         <div class="jumbotron">
-            <h1>Akan Name  and birthday calculator</h1>
+                <h1>Akan Name  and birthday calculator</h1>
+                <blockquote class="blockquote-reverse">
+                    
+                    <p class="text-info">In this website,you can know your Akan name which is given to you according to the you were born!Enjoy while getting an Akan name</p>
+                </blockquote>
+            </div>
+        </div>
+            <div class="jumbotron">
             <form action="/action_page.php">
-                <input type="radio" name="gender" value="male">Male<br>
-                <input type="radio" name="gender" value="female">Female<br>
-                 Birthdate:<input type="date" id="myDate" ><br><br>
-                <input type="button" onclick="myFunction()" value="submit">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>What is your gender?</h2>
+                            <input type="radio" name="gender" value="male" width=100px>Male<br>
+                            <input type="radio" name="gender" value="female" width=100px>Female<br>
+
+                    </div>
+                    <div class="col-md-4">
+                            Birthdate:<input class="form-control" type="date" id="myDate" ><br><br>
+                
+
+
+                    </div>
+                    <div class="col-md-4">
+                            <p id="demo"></p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                            <input class="form-control"  type="button" onclick="myFunction()" value="submit">
+                    </div>
+
+                </div>
+              
+                
                 <br><br>
-                <p id="demo"></p>
+               
           
             </form> 
         </div>
+       
     </div>
     
-</body>
+
 <script>
         function myFunction() {
             var gender = document.forms[0];
@@ -32,9 +62,10 @@
             var date = document.getElementById("myDate").value;
             var d = new Date(date);
             var mm = parseInt(d.getMonth());
-            var dd=parseInt(x[8].concat(x[9]));
-            var cc=parseInt(x[0].concat(x[1]));
-            var yy=parseInt(x[2].concat(x[3]));
+            var dd=parseInt(date[8].concat(date[9]));
+            var cc=parseInt(date[0].concat(date[1]));
+            var yy=parseInt(date[2].concat(date[3]));
+        
             if(mm===0)
             {
                 mm=11;
@@ -56,7 +87,7 @@
             {
                 for(i=rem;i>=rem-6;i--)
                 {
-                    if(i%7===0)
+                    if(i%7==0)
                     {
                     r=(i*(-1)) + rem;
                     }
@@ -76,8 +107,23 @@
                         if((gender[i].value==="female")&& (r===j))
                         {
                         txt = txt + gender[i].value + " "  ;
-                        document.getElementById("demo").innerHTML  = "Your gender is " + txt + " ,your name is "  + namesFemale[j] + "  and you were born on " +  days[j];
+                        document.getElementById("demo").innerHTML  = " Congratulations !!!!!!You got a new name! Your gender is " + txt + " ,your name is "  + namesFemale[j] + "  and you were born on " +  days[j];
                         }
+                        if((gender[i].value==="male")&& (r===j))
+                        {
+                        txt = txt + gender[i].value + " "  ;
+                        document.getElementById("demo").innerHTML  = "Congratulations !!!!!!You got a new name! Your gender is " + txt + " ,your name is "  + namesMale[j] + "  and you were born on " +  days[j];
+                        }
+                        
 
+                    }
+                }
+            }
+            }
 
+           
+
+        
+</script> 
+</body>
 </html>
