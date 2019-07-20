@@ -5,54 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Akan Name</title>
-    <link rel="stylesheet" href="css/styles.css">
+   
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body class="bg-dark">
     <div class="container ">
-        <div class="jumbotron bg-info">
-                <h1>Akan Name  and birthday calculator</h1>
+        <div class="jumbotron bg-info text-center" >
+                <h1><em>Akan Name  and birthday calculator</em></h1>
                 <blockquote class="blockquote-reverse">
-                    
-                    <p >In this website,you can know your Akan name which is given to you according to the you were born!Enjoy while getting an Akan name</p>
+                    <img src="images/Akan-designstyle-friday-m.png">
+                    <p class="text-center text-light">In this website,you can know your Akan name which is a nigerian name given to you according to the day you were born!Enjoy while getting an Akan name</p>
                 </blockquote>
-            </div>
         </div>
-            <div class="jumbotron">
-            <form action="/action_page.php">
+        </div>
+        <div class="jumbotron">
+            <form>
                 <div class="row">
                     <div class="col-md-4">
                         <h2>What is your gender?</h2>
-                            <input type="radio" name="gender" value="male" width=100px>Male<br>
-                            <input type="radio" name="gender" value="female" width=100px>Female<br>
-
+                        <input type="radio" name="gender" value="male" width=200px>Male<br>
+                        <input type="radio" name="gender" value="female" width=200px>Female<br>
                     </div>
                     <div class="col-md-4">
-                            Birthdate:<input class="form-control" type="date" id="myDate" ><br><br>
-                
-
-
+                        Birthdate:<input class="form-control" type="date" id="myDate" ><br><br>
                     </div>
-                    <div class="col-md-4">
-                            <p id="demo"></p>
+                    <div class="col-md-4 ">
+                            <p id="demo" class=" bg-dark text-light"></p>
                     </div>
-
                 </div>
                 <div class="row">
                     <div class="col-md-8">
-                            <input class="form-control bg-default"  type="button" onclick="myFunction()" value="submit">
+                            <input class="form-control bg-dark text-light"  type="button" onclick="myFunction()" value="submit">
                     </div>
-
                 </div>
-              
-                
-                <br><br>
-               
-          
             </form> 
         </div>
        
+       
     </div>
+    <footer class="page-footer font-small bg-info">
+        <div class="footer-copyright text-center py-3">
+                <p>copyright..@2019</p>
+        </div>
+           
+        </footer>
     
 
 <script>
@@ -101,9 +97,13 @@
             var namesMale=["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","kofi","kwame"];
             var namesFemale=["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
             var j;
+           
+            
             for (i = 0; i < gender.length; i++) {
+               
                 if (gender[i].checked) {
                     for(j=0;j<=6;j++){
+                      
                         if((gender[i].value==="female")&& (r===j))
                         {
                         txt = txt + gender[i].value + " "  ;
@@ -114,11 +114,11 @@
                         txt = txt + gender[i].value + " "  ;
                         document.getElementById("demo").innerHTML  = "Congratulations !!!!!!You got a new name! Your gender is " + txt + " ,your name is "  + namesMale[j] + "  and you were born on " +  days[j];
                         }
-                        if((gender[i].value==="")){
-                            document.getElementById("demo").innerHTML  ="please fill the form";
-                        }
 
                     }
+                }
+                else if(gender.checked==="false"){
+                    document.getElementById("demo").innerHTML  ="oo";
                 }
             }
             }
