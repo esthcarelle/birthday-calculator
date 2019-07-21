@@ -1,0 +1,132 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Akan Name</title>
+   
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body class="bg-dark">
+    <div class="container ">
+        <div class="jumbotron bg-info text-center" >
+                <h1><em>Akan Name  and birthday calculator</em></h1>
+                <blockquote class="blockquote-reverse">
+                    <img src="images/Akan-designstyle-friday-m.png">
+                    <p class="text-center text-light">In this website,you can know your Akan name which is a nigerian name given to you according to the day you were born!Enjoy while getting an Akan name</p>
+                </blockquote>
+        </div>
+        </div>
+        <div class="jumbotron">
+            <form>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>What is your gender?</h2><br>
+                        <input type="radio" name="gender" value="male" width=200px>Male<br><br><br>
+                        <input type="radio" name="gender" value="female" width=200px>Female<br>
+                    </div>
+                    <div class="col-md-4 ">
+                        Input day of birth:<br>
+                        <input class="form-control" type="number" id="dd"><br>
+                        Input month of birth:<br>
+                        <input class="form-control" type="number" id="mm"><br>
+                        Input year of birth:<br>
+                        <input class="form-control" type="text" id="year"><br><br>
+                    </div>
+                    <div class="col-md-4 ">
+                            <p id="demo" class=" bg-dark text-light"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                            <input class="form-control bg-dark text-light"  type="button" onclick="myFunction()" value="submit">
+                    </div>
+                </div>
+            </form> 
+        </div>
+       
+    <footer class="page-footer font-small bg-info">
+        <div class="footer-copyright text-center py-3">
+                <p><em>copyright kendall Carrelle</em>@2019</p>
+        </div>
+    </footer>
+    
+    <script>
+        function myFunction() {
+            var gender = document.forms[0];
+            var txt = "";  
+            var mm=parseInt(document.getElementById("mm").value);
+            var dd=parseInt(document.getElementById("dd").value);
+            var year=document.getElementById("year").value;
+            var yy=parseInt(year[2].concat(year[3]));
+            var cc=parseInt(year[0].concat(year[1]));
+            if((dd>0)&&(dd<=31)&&(mm>0)&&(mm<=12)&&(year>=0)){
+            
+                if(mm===1)
+                {
+                    mm=11;
+                    yy=yy-1;
+                }
+                else if (mm===2)
+                {
+                    mm=12;
+                    yy=yy-1;
+                }
+                else
+                {
+                    mm=mm-2;
+                }
+                var day =  dd + parseInt(((13*mm -1)/5)) + yy + parseInt((yy/4)) + parseInt((cc/4)) - 2*cc;
+                var rem=day%7;
+                var i,r;
+                if(rem<0)
+                {
+                    for(i=rem;i>=rem-6;i--)
+                    {
+                        if(i%7==0)
+                        {
+                        r=(i*(-1)) + rem;
+                        }
+                    }
+                }
+                else
+                {
+                r=rem;
+                }
+                var days=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+                var namesMale=["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","kofi","kwame"];
+                var namesFemale=["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
+                var j;
+                
+                for (i = 0; i < gender.length; i++) {
+                
+                    if (gender[i].checked)
+                    {
+                        for(j=0;j<=6;j++)
+                        {
+                        
+                            if((gender[i].value==="female")&& (r===j))
+                            {
+                            txt = txt + gender[i].value + " "  ;
+                            document.getElementById("demo").innerHTML  = " Congratulations !!!!!!You got a new name! Your gender is " + txt + " ,your name is "  + namesFemale[j] + "  and you were born on " +  days[j];
+                            }
+                            if((gender[i].value==="male")&& (r===j))
+                            {
+                            txt = txt + gender[i].value + " "  ;
+                            document.getElementById("demo").innerHTML  = "Congratulations !!!!!!You got a new name! Your gender is " + txt + " ,your name is "  + namesMale[j] + "  and you were born on " +  days[j];
+                            }
+
+                        }
+                    }
+                
+                }
+            }
+            else{
+                document.getElementById("demo").innerHTML  = "Invalid input! Please fill the form in the right way!Thank you";
+            }
+        } 
+        
+    </script> 
+</body>
+</html>
