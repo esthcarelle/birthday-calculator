@@ -4,7 +4,7 @@
 ## Description
 {this website is a birthday calculator in which you input your gender and the date on which you were born and which gives an Akan name which is based on the day you were born on. }
 ## Setup/Installation Requirements
-* We need to have a browser
+* We need to have a browser.
 * updated browser
 * choose if you are a female or a male.
 * input the day,month and year.
