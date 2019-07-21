@@ -49,6 +49,8 @@
     
 
     <script>
+        var date = document.getElementById("myDate").value;
+        alert("Welcome!Please fill the form");
         function myFunction() {
             var gender = document.forms[0];
             var txt = "";         
@@ -58,6 +60,7 @@
             var dd=parseInt(date[8].concat(date[9]));
             var cc=parseInt(date[0].concat(date[1]));
             var yy=parseInt(date[2].concat(date[3]));
+            alert(date);
         
             if(mm===0)
             {
@@ -106,17 +109,18 @@
                         txt = txt + gender[i].value + " "  ;
                         document.getElementById("demo").innerHTML  = " Congratulations !!!!!!You got a new name! Your gender is " + txt + " ,your name is "  + namesFemale[j] + "  and you were born on " +  days[j];
                         }
-                        if((gender[i].value==="male")&& (r===j))
+                         if((gender[i].value==="male")&& (r===j))
                         {
                         txt = txt + gender[i].value + " "  ;
                         document.getElementById("demo").innerHTML  = "Congratulations !!!!!!You got a new name! Your gender is " + txt + " ,your name is "  + namesMale[j] + "  and you were born on " +  days[j];
                         }
+                         if(gender[i].value===null){
+                           alert("noo");
+                         }
 
                     }
                 }
-                else if(gender.checked==="false"){
-                    document.getElementById("demo").innerHTML  ="oo";
-                }
+               
             }
             }
 
