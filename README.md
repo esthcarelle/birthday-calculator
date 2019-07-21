@@ -6,9 +6,9 @@
 ## Setup/Installation Requirements
 * We need to have a browser
 * updated browser
-* choose if you are a female or a male
-* input the day,month and year
-* enjoy the output
+* choose if you are a female or a male.
+* input the day,month and year.
+* enjoy the output.
 {This website is very easy for use.We don't need to have servers or databases.We have just to click and enjoying getting an Akan name}
 ## Known Bugs
 {There are no bugs in this website.}
