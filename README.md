@@ -2,7 +2,7 @@
 #### {the website is a birthday calculator which tells you the day you were born on}, {21/7/2019}
 #### By **{Esther Carrelle}**
 ## Description
-{this website is a birthday calculator in which you input your gender and the date on which you were born and which gives an Akan name which is based to the day you were born on. }
+{this website is a birthday calculator in which you input your gender and the date on which you were born and which gives an Akan name which is based on the day you were born on. }
 ## Setup/Installation Requirements
 * We need to have a browser
 * updated browser
