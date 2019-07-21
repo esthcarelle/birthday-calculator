@@ -11,7 +11,7 @@
 * enjoy the output
 {This website is very easy for use.We don't need to have servers or databases.We have just to click and enjoying getting an Akan name}
 ## Known Bugs
-{There are no bugs in this website}
+{There are no bugs in this website.}
 ## Technologies Used
 {This website has been built using only html , bootstrap and javascript}
 ## Support and contact details
