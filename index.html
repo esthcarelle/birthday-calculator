@@ -60,8 +60,16 @@
             var mm=parseInt(document.getElementById("mm").value);
             var dd=parseInt(document.getElementById("dd").value);
             var year=document.getElementById("year").value;
-            var yy=parseInt(year[2].concat(year[3]));
-            var cc=parseInt(year[0].concat(year[1]));
+            var yearInt=parseInt(year);
+            if(yearInt<100){
+                 var cc=0;
+                 var yy=yearInt;
+            }
+            else{
+                var yy=parseInt(year[2].concat(year[3]));
+                var cc=parseInt(year[0].concat(year[1]));
+            }
+           
             if((dd>0)&&(dd<=31)&&(mm>0)&&(mm<=12)&&(year>=0)){
             
                 if(mm===1)
