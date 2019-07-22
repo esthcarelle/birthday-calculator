@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body class="bg-dark">
-    <div class="container ">
+    <div class="container">
         <div class="jumbotron bg-info text-center" >
                 <h1><em>Akan Name  and birthday calculator</em></h1>
                 <blockquote class="blockquote-reverse">
@@ -19,12 +19,12 @@
         </div>
         </div>
         <div class="jumbotron">
-            <form>
+            <form id="myForm">
                 <div class="row">
                     <div class="col-md-4">
                         <h2>What is your gender?</h2><br>
-                        <input type="radio" name="gender" value="male" width=200px>Male<br><br><br>
-                        <input type="radio" name="gender" value="female" width=200px>Female<br>
+                        <input type="radio" name="gender" value="male" >Male<br><br><br>
+                        <input type="radio" name="gender" value="female" >Female<br>
                     </div>
                     <div class="col-md-4 ">
                         Input day of birth:<br>
@@ -40,7 +40,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8">
-                            <input class="form-control bg-dark text-light"  type="button" onclick="myFunction()" value="submit">
+                            <input class="form-control bg-dark text-light"  type="button" onclick="myFunction()" value="submit"><br>
+                            <input class="form-control bg-dark text-light" type="button" onclick="resetMyForm()" value="clear">
                     </div>
                 </div>
             </form> 
@@ -126,7 +127,10 @@
                 document.getElementById("demo").innerHTML  = "Invalid input! Please fill the form in the right way!Thank you";
             }
         } 
-        
+        function resetMyForm(){
+            document.getElementById("myForm").reset();
+        }
+
     </script> 
 </body>
 </html>
