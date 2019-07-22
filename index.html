@@ -58,6 +58,7 @@
             var gender = document.forms[0];
             var txt = "";  
             var mm=parseInt(document.getElementById("mm").value);
+            var month=mm;
             var dd=parseInt(document.getElementById("dd").value);
             var year=document.getElementById("year").value;
             var yearInt=parseInt(year);
@@ -118,12 +119,12 @@
                             if((gender[i].value==="female")&& (r===j))
                             {
                             txt = txt + gender[i].value + " "  ;
-                            document.getElementById("demo").innerHTML  = " Congratulations !!!!!!You got a new name! Your gender is " + txt + " ,your name is "  + namesFemale[j] + "  and you were born on " +  days[j];
+                            document.getElementById("demo").innerHTML  = " Congratulations !!!!!!You got a new name! Your gender is " + txt + " ,your name is "  + namesFemale[j] + "  and you were born on " +  days[j] + " " + dd +  "/" + month + "/" + yearInt;
                             }
                             if((gender[i].value==="male")&& (r===j))
                             {
                             txt = txt + gender[i].value + " "  ;
-                            document.getElementById("demo").innerHTML  = "Congratulations !!!!!!You got a new name! Your gender is " + txt + " ,your name is "  + namesMale[j] + "  and you were born on " +  days[j];
+                            document.getElementById("demo").innerHTML  = "Congratulations !!!!!!You got a new name! Your gender is " + txt + " ,your name is "  + namesMale[j] + "  and you were born on " +  days[j]  + " " + dd +  "/" + month + "/" + yearInt;
                             }
 
                         }
