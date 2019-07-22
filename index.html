@@ -19,7 +19,7 @@
         </div>
         </div>
         <div class="jumbotron">
-            <form>
+            <form id="myForm">
                 <div class="row">
                     <div class="col-md-4">
                         <h2>What is your gender?</h2><br>
@@ -40,7 +40,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8">
-                            <input class="form-control bg-dark text-light"  type="button" onclick="myFunction()" value="submit">
+                            <input class="form-control bg-dark text-light"  type="button" onclick="myFunction()" value="submit"><br>
+                            <input class="form-control bg-dark text-light" type="button" onclick="resetMyForm()" value="clear">
                     </div>
                 </div>
             </form> 
@@ -126,6 +127,9 @@
                 document.getElementById("demo").innerHTML  = "Invalid input! Please fill the form in the right way!Thank you";
             }
         } 
+        function resetMyForm(){
+            document.getElementById("myForm").reset();
+        }
 
     </script> 
 </body>
